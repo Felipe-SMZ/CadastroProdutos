@@ -1,0 +1,7 @@
+<h2>Editar Produto</h2>
+<form action="/produtos/{{produto.id}}/editar" method="POST">
+    <label>Nome: <input type="text" name="nome" value="{{produto.nome}}" required></label><br>
+    <label>Preço: <input type="number" step="0.01" name="preco" value="{{produto.preco}}" required></label><br>
+    <label>Categoria: <input type="text" name="categoria" value="{{produto.categoria}}" required></label><br>
+    <button type="submit">Atualizar</button>
+</form>

@@ -20,6 +20,7 @@ app.post("/produtos/adicionar", produtosController.adicionar);
 app.get("/produtos/:id/editar", produtosController.exibirEditar);
 app.post("/produtos/:id/editar", produtosController.editar);
 app.post("/produtos/:id/excluir", produtosController.excluir);
+app.use(express.static("public"));
 
 // Servidor
 app.listen(3000, () => console.log("Servidor rodando em http://localhost:3000"));

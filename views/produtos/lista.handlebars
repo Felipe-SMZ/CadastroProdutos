@@ -1,0 +1,24 @@
+<a href="/produtos/adicionar">Adicionar Produto</a>
+<table border="1" cellpadding="5">
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Categoria</th>
+        <th>Ações</th>
+    </tr>
+    {{#each produtos}}
+    <tr>
+        <td>{{this.id}}</td>
+        <td>{{this.nome}}</td>
+        <td>R$ {{this.preco}}</td>
+        <td>{{this.categoria}}</td>
+        <td>
+            <a href="/produtos/{{this.id}}/editar">Editar</a>
+            <form action="/produtos/{{this.id}}/excluir" method="POST" style="display:inline;">
+                <button type="submit">Excluir</button>
+            </form>
+        </td>
+    </tr>
+    {{/each}}
+</table>
